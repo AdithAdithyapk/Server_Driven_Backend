@@ -1,0 +1,104 @@
+{
+    "type": "component",
+    "title": "Student Information List",
+    "htmlStructure": [
+      {
+        "element": "div",
+        "class": "container mt-4",
+        "children": [
+          {
+            "element": "div",
+            "class": "d-flex align-items-center justify-content-between",  
+            "children": [
+              {
+                "element": "h3",
+                "text": "Student Information List",
+                "class": "mb-3"
+              },
+              {
+                "element": "button",
+                "text": "Add Student",
+                "class": "btn btn-primary mb-3", 
+                "action": {
+                    "type": "api",
+                    "url": "/authenticate",
+                    "method": "POST",
+                    "fields": ["email", "password"],
+                    "onSuccess": {
+                      "type": "navigate",
+                      "route": "/dashboard"
+                    },
+                    "onError": {
+                      "type": "alert",
+                      "messageField": "message"
+                    }
+                  }
+              }
+            ]
+          },
+          {
+            "element": "table",
+            "class": "table table-bordered",
+            "children": [
+              {
+                "element": "thead",
+                "children": [
+                  {
+                    "element": "tr",
+                    "children": [
+                      { "element": "th", "text": "Name", "class": "text-center" },
+                      { "element": "th", "text": "Age", "class": "text-center" },
+                      { "element": "th", "text": "Grade", "class": "text-center" },
+                      { "element": "th", "text": "Enrolled", "class": "text-center" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "element": "tbody",
+                "children": [
+                  {
+                    "element": "tr",
+                    "children": [
+                      { "element": "td", "text": "John Doe" },
+                      { "element": "td", "text": "20" },
+                      { "element": "td", "text": "A" },
+                      { "element": "td", "text": "Yes" }
+                    ]
+                  },
+                  {
+                    "element": "tr",
+                    "children": [
+                      { "element": "td", "text": "Jane Smith" },
+                      { "element": "td", "text": "22" },
+                      { "element": "td", "text": "B" },
+                      { "element": "td", "text": "No" }
+                    ]
+                  },
+                  {
+                    "element": "tr",
+                    "children": [
+                      { "element": "td", "text": "Jane Smith" },
+                      { "element": "td", "text": "22" },
+                      { "element": "td", "text": "B" },
+                      { "element": "td", "text": "No" }
+                    ]
+                  },
+                  {
+                    "element": "tr",
+                    "children": [
+                      { "element": "td", "text": "Jane Smith" },
+                      { "element": "td", "text": "22" },
+                      { "element": "td", "text": "B" },
+                      { "element": "td", "text": "No" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+          
+        ]
+      }
+    ]
+  }
