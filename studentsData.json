@@ -1,28 +1,25 @@
 {
-    "students": [
-      {
-        "name": "John Doe",
-        "age": 20,
-        "grade": "A",
-        "enrolled": "Yes"
-      },
-      {
-        "name": "Jane Smith",
-        "age": 22,
-        "grade": "B",
-        "enrolled": "No"
-      },
-      {
-        "name": "David Lee",
-        "age": 21,
-        "grade": "A",
-        "enrolled": "Yes"
-      },
-      {
-        "name": "Emily White",
-        "age": 23,
-        "grade": "C",
-        "enrolled": "Yes"
-      }
-    ]
-  }
+  "students": [
+    {
+      "enrolled": "Yes",
+      "department": "ece",
+      "name": "asd",
+      "email": "asd@gamil,com",
+      "age": "22"
+    },
+    {
+      "enrolled": "No",
+      "department": "cs",
+      "name": "loki",
+      "email": "loki@gamil,com",
+      "age": "32"
+    },
+    {
+      "enrolled": "Yes",
+      "department": "cs",
+      "name": "adith",
+      "email": "loki@gamil,com",
+      "age": "32"
+    }
+  ]
+}

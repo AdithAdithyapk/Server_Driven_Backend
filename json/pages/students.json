@@ -22,16 +22,18 @@
               "class": "mb-3"
             },
             {
-              "element": "button",
-              "text": "Add Student",
-              "class": "btn btn-primary mb-3", 
-              "action": {
-                  "type": "navigate",
-                  "route": "/student/add"
-              }
+                "element": "button",
+                "text": "Add Student",
+                "class": "btn btn-primary mb-3",
+                "action": {
+                    "type": "openModal",
+                    "modalId": "addStudent",
+                    "title" : "Add Student"
+                }
             }
           ]
         },
+
         {
           "element": "table",
           "class": "table table-bordered",
@@ -43,8 +45,9 @@
                   "element": "tr",
                   "children": [
                     { "element": "th", "text": "Name", "class": "text-center" },
+                    { "element": "th", "text": "Email", "class": "text-center" },
                     { "element": "th", "text": "Age", "class": "text-center" },
-                    { "element": "th", "text": "Grade", "class": "text-center" },
+                    { "element": "th", "text": "Department", "class": "text-center" },
                     { "element": "th", "text": "Enrolled", "class": "text-center" }
                   ]
                 }
@@ -58,8 +61,9 @@
                   "element": "tr",
                   "children": [
                     { "element": "td", "text": "{{item.name}}" },
+                    { "element": "td", "text": "{{item.email}}" },
                     { "element": "td", "text": "{{item.age}}" },
-                    { "element": "td", "text": "{{item.grade}}" },
+                    { "element": "td", "text": "{{item.department}}" },
                     { "element": "td", "text": "{{item.enrolled}}" }
                   ]
                 }
