@@ -1,0 +1,50 @@
+{
+  "type": "page",
+  "title": "Login Page",
+  "htmlStructure": [
+    {
+      "element": "div",
+      "class": "container d-flex flex-column align-items-center justify-content-center vh-100",
+      "children": [
+        {
+          "element": "h2",
+          "text": "Login",
+          "class": "mb-3"
+        },
+        {
+          "element": "input",
+          "type": "text",
+          "name": "email",
+          "placeholder": "Enter email",
+          "class": "form-control mb-2"
+        },
+        {
+          "element": "input",
+          "type": "password",
+          "name": "password",
+          "placeholder": "Enter password",
+          "class": "form-control mb-2"
+        },
+        {
+          "element": "button",
+          "text": "Login",
+          "class": "btn btn-primary w-100",
+          "action": {
+            "type": "api",
+            "url": "/authenticate",
+            "method": "POST",
+            "fields": ["email", "password"],
+            "onSuccess": {
+              "type": "navigate",
+              "route": "/dashboard"
+            },
+            "onError": {
+              "type": "alert",
+              "messageField": "message"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

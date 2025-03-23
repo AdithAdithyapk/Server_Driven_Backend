@@ -1,0 +1,144 @@
+{
+  "type": "component",
+  "title": "Admin Dashboard",
+  "htmlStructure": [
+    {
+      "element": "div",
+      "class": "container mt-4",
+      "children": [
+        {
+          "element": "h3",
+          "text": "Dashboard Overview",
+          "class": "mb-3"
+        },
+        {
+          "element": "div",
+          "class": "row",
+          "children": [
+            {
+              "element": "div",
+              "class": "col-md-4",
+              "children": [
+                {
+                  "element": "div",
+                  "class": "card text-white bg-primary mb-3",
+                  "children": [
+                    {
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "Total Students: {{data.stats.totalStudents}}",
+                          "class": "card-title"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "class": "col-md-4",
+              "children": [
+                {
+                  "element": "div",
+                  "class": "card text-white bg-success mb-3",
+                  "children": [
+                    {
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "Faculty Members: {{data.stats.facultyCount}}",
+                          "class": "card-title"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "class": "col-md-4",
+              "children": [
+                {
+                  "element": "div",
+                  "class": "card text-white bg-info mb-3",
+                  "children": [
+                    {
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "Upcoming Events: {{data.stats.upcomingEvents}}",
+                          "class": "card-title"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "class": "row",
+          "children": [
+            {
+              "element": "div",
+              "class": "col-md-6",
+              "children": [
+                {
+                  "element": "div",
+                  "class": "card text-white bg-warning mb-3",
+                  "children": [
+                    {
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "Fees Collected: \u20b9{{data.stats.collectedFees}}",
+                          "class": "card-title"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "div",
+              "class": "col-md-6",
+              "children": [
+                {
+                  "element": "div",
+                  "class": "card text-white bg-dark mb-3",
+                  "children": [
+                    {
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "Recent Notices: {{data.stats.recentNotices}}",
+                          "class": "card-title"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

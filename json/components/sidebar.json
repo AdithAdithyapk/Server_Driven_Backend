@@ -1,0 +1,8 @@
+{
+    "menuItems": [
+      { "label": "Dashboard", "action": "/dashboard", "icon": "bi bi-speedometer2" },
+      { "label": "Settings", "action": "/settings", "icon": "bi bi-gear" },
+      { "label": "Modify", "action": "/modify", "icon": "bi bi-pencil" }
+    ]
+  }
+  

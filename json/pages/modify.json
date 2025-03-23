@@ -1,0 +1,42 @@
+{
+    "layout": "grid",
+    "type": "component",
+    "components": [
+      {
+        "type": "div",
+        "class": "container mt-4",
+        "children": [
+          {
+            "type": "text",
+            "content": "Modify Existing Page or Component",
+            "class": "h3 text-center"
+          },
+          {
+            "type": "select",
+            "name": "jsonFile",
+            "options": [],
+            "class": "form-select mb-3"
+          },
+          {
+            "type": "editor",
+            "name": "editorContent"
+          },
+          {
+            "type": "button",
+            "label": "Load",
+            "method": "GET",
+            "action": "/load",
+            "class": "btn btn-secondary w-100 mt-2"
+          },
+          {
+            "type": "button",
+            "label": "Save",
+            "method": "POST",
+            "action": "/save",
+            "class": "btn btn-primary w-100 mt-2"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,50 @@
+{
+    "type": "component",
+    "title": "Create New Page/Component",
+    "htmlStructure": [
+      {
+        "element": "div",
+        "class": "container mt-4",
+        "children": [
+          {
+            "element": "h3",
+            "text": "Create New",
+            "class": "mb-3"
+          },
+          {
+            "element": "input",
+            "type": "text",
+            "name": "title",
+            "placeholder": "Enter Title",
+            "class": "form-control mb-2"
+          },
+          {
+            "element": "select",
+            "name": "type",
+            "options": [
+              { "label": "Page", "value": "page" },
+              { "label": "Component", "value": "component" }
+            ],
+            "class": "form-select mb-2"
+          },
+          {
+            "element": "checkbox",
+            "name": "addToSidebar",
+            "label": "Add to Sidebar",
+            "class": "form-check-input mb-2"
+          },
+          {
+            "element": "button",
+            "text": "Create",
+            "class": "btn btn-success w-100",
+            "action": {
+              "url": "/api/json/create",
+              "method": "POST",
+              "fields": ["title", "type", "addToSidebar"]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
