@@ -1,6 +1,12 @@
 {
   "type": "component",
   "title": "Admin Dashboard",
+  "action": {
+    "type": "data",
+    "title": "Dashboard Data",
+    "url": "/api/dashboard-stats",
+    "method": "GET"
+  },
   "htmlStructure": [
     {
       "element": "div",
@@ -142,12 +148,27 @@
           "element": "chart",
           "type": "bar",
           "data": {
-            "labels": ["January", "February", "March", "April"],
+            "labels": [
+              "January",
+              "February",
+              "March",
+              "April"
+            ],
             "datasets": [
               {
-                "data": [65, 59, 80, 81],
+                "data": [
+                  65,
+                  59,
+                  80,
+                  81
+                ],
                 "label": "Sales",
-                "backgroundColor": ["#42A5F5", "#66BB6A", "#FF7043", "#8E24AA"]
+                "backgroundColor": [
+                  "#42A5F5",
+                  "#66BB6A",
+                  "#FF7043",
+                  "#8E24AA"
+                ]
               }
             ]
           },
@@ -155,11 +176,13 @@
             "responsive": true,
             "maintainAspectRatio": false,
             "scales": {
-              "xAxes": [{
-                "ticks": {
-                  "beginAtZero": true
+              "xAxes": [
+                {
+                  "ticks": {
+                    "beginAtZero": true
+                  }
                 }
-              }]
+              ]
             }
           },
           "class": "chart-class"
@@ -168,11 +191,26 @@
           "element": "chart",
           "type": "pie",
           "data": {
-            "labels": ["Red", "Blue", "Yellow", "Green"],
+            "labels": [
+              "Red",
+              "Blue",
+              "Yellow",
+              "Green"
+            ],
             "datasets": [
               {
-                "data": [300, 50, 100, 150],
-                "backgroundColor": ["#FF5733", "#42A5F5", "#FFEB3B", "#66BB6A"]
+                "data": [
+                  300,
+                  50,
+                  100,
+                  150
+                ],
+                "backgroundColor": [
+                  "#FF5733",
+                  "#42A5F5",
+                  "#FFEB3B",
+                  "#66BB6A"
+                ]
               }
             ]
           },
@@ -191,10 +229,20 @@
           "element": "chart",
           "type": "line",
           "data": {
-            "labels": ["January", "February", "March", "April"],
+            "labels": [
+              "January",
+              "February",
+              "March",
+              "April"
+            ],
             "datasets": [
               {
-                "data": [65, 59, 80, 81],
+                "data": [
+                  65,
+                  59,
+                  80,
+                  81
+                ],
                 "label": "Sales Over Time",
                 "fill": false,
                 "borderColor": "#42A5F5",
@@ -219,7 +267,6 @@
           },
           "class": "chart-class"
         }
-                
       ]
     }
   ]

@@ -1,6 +1,12 @@
 {
   "type": "component",
   "title": "Student Information List",
+  "action": {
+    "type": "data",
+    "title": "Student Data",
+    "url": "/api/students",
+    "method": "GET"
+  },
   "htmlStructure": [
     {
       "element": "div",
