@@ -1,0 +1,11 @@
+{
+    "title": "College Management System",
+    "buttons": [
+      {
+        "label": "Logout",
+        "action": "/logout",
+        "class": "btn btn-light"
+      }
+    ]
+  }
+  

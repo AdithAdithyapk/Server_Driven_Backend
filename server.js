@@ -103,4 +103,15 @@ app.get('/api/dashboard-stats', (req, res) => {
     });
   });
 
+app.get('/api/students', (req, res) => {
+    const filePath = path.join(__dirname, 'studentsData.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading Students data:', err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+      }
+      res.json(JSON.parse(data));
+    });
+  });
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

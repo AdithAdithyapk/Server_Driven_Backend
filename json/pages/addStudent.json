@@ -1,0 +1,187 @@
+{
+    "type": "component",
+    "title": "Add Student",
+    "htmlStructure": [
+      {
+        "element": "div",
+        "class": "container mt-4",
+        "children": [
+          {
+            "element": "h3",
+            "text": "Student Registration",
+            "class": "mb-4 text-center"
+          },
+          {
+            "element": "div",
+            "class": "row",
+            "children": [
+              {
+                "element": "div",
+                "class": "col-md-6",
+                "children": [
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Full Name", "for": "studentName" },
+                      {
+                        "element": "input",
+                        "type": "text",
+                        "name": "studentName",
+                        "id": "studentName",
+                        "class": "form-control",
+                        "placeholder": "Enter Full Name",
+                        "required": true
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Email", "for": "studentEmail" },
+                      {
+                        "element": "input",
+                        "type": "email",
+                        "name": "studentEmail",
+                        "id": "studentEmail",
+                        "class": "form-control",
+                        "placeholder": "Enter Email",
+                        "required": true
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Age", "for": "studentAge" },
+                      {
+                        "element": "input",
+                        "type": "number",
+                        "name": "studentAge",
+                        "id": "studentAge",
+                        "class": "form-control",
+                        "placeholder": "Enter Age",
+                        "required": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "element": "div",
+                "class": "col-md-6",
+                "children": [
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Department" },
+                      {
+                        "element": "div",
+                        "class": "form-check",
+                        "children": [
+                          {
+                            "element": "input",
+                            "type": "radio",
+                            "name": "department",
+                            "value": "cs",
+                            "class": "form-check-input",
+                            "id": "deptCS"
+                          },
+                          {
+                            "element": "label",
+                            "text": "Computer Science",
+                            "class": "form-check-label",
+                            "for": "deptCS"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "div",
+                        "class": "form-check",
+                        "children": [
+                          {
+                            "element": "input",
+                            "type": "radio",
+                            "name": "department",
+                            "value": "ece",
+                            "class": "form-check-input",
+                            "id": "deptECE"
+                          },
+                          {
+                            "element": "label",
+                            "text": "Electronics",
+                            "class": "form-check-label",
+                            "for": "deptECE"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "div",
+                        "class": "form-check",
+                        "children": [
+                          {
+                            "element": "input",
+                            "type": "radio",
+                            "name": "department",
+                            "value": "me",
+                            "class": "form-check-input",
+                            "id": "deptME"
+                          },
+                          {
+                            "element": "label",
+                            "text": "Mechanical",
+                            "class": "form-check-label",
+                            "for": "deptME"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      {
+                        "element": "checkbox",
+                        "name": "enrolled",
+                        "label": "Enroll for Department",
+                        "class": "form-check-input"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "element": "div",
+            "class": "text-center mt-4",
+            "children": [
+              {
+                "element": "button",
+                "text": "Submit",
+                "class": "btn btn-primary px-4",
+                "action": {
+                  "type": "api",
+                  "url": "/students/add",
+                  "method": "POST",
+                  "fields": ["studentName", "studentEmail", "studentAge", "department", "enrolled"],
+                  "onSuccess": {
+                    "type": "navigate",
+                    "route": "/student/list"
+                  },
+                  "onError": {
+                    "type": "alert",
+                    "messageField": "message"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
