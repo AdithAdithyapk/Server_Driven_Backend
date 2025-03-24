@@ -114,39 +114,15 @@ app.get('/api/students', (req, res) => {
     });
   });
 
-  app.post('/api/students', (req, res) => {
-
-    console.log("*******req.*******",req)
-    const filePath = path.join(__dirname, 'studentsData.json');
-    console.log("Incoming Request:", req.body);
-
-    // Read the existing data
-    fs.readFile(filePath, "utf8", (err, data) => {
+app.get('/api/events', (req, res) => {
+    const filePath = path.join(__dirname, 'eventsData.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
-            console.error("Error reading file:", err);
-            return res.status(500).json({ error: "Internal Server Error" });
+            console.error('Error reading Events data:', err);
+            return res.status(500).json({ error: 'Internal Server Error' });
         }
-
-        let studentsData = JSON.parse(data);
-
-        // Ensure "students" array exists
-        if (!Array.isArray(studentsData.students)) {
-            studentsData.students = [];
-        }
-
-        // Add the new student
-        studentsData.students.push(req.body);
-
-        // Write the updated data back to the file
-        fs.writeFile(filePath, JSON.stringify(studentsData, null, 2), (writeErr) => {
-            if (writeErr) {
-                console.error("Error writing file:", writeErr);
-                return res.status(500).json({ error: "Internal Server Error" });
-            }
-
-            res.status(201).json({ message: "Student added successfully", student: req.body });
-        });
+        res.json(JSON.parse(data));
     });
-  });
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
