@@ -24,6 +24,7 @@
               "element": "button",
               "text": "➕ Add New Event",
               "class": "btn btn-primary",
+              "visibleForAdmin": true,
               "action": {
                 "type": "openModal",
                 "modalId": "addEvent",

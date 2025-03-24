@@ -3,23 +3,39 @@
     {
       "label": "Dashboard",
       "action": "/dashboard",
-      "icon": "bi bi-speedometer2"
+      "icon": "bi bi-speedometer2",
+      "admin" :true,
+      "user": false
     },
     {
       "label": "Settings",
       "action": "/settings",
-      "icon": "bi bi-gear"
+      "icon": "bi bi-gear",
+      "admin" :true,
+      "user": false
     },
     {
       "label": "Student",
       "action": "/students",
-      "icon": "bi bi-person-lines-fill"
+      "icon": "bi bi-person-lines-fill",
+      "admin" :true,
+      "user": false
     },
     {
-      "label": "Eventmanagement",
+      "label": "Student Profile",
+      "action": "/student_profile",
+      "icon": "bi bi-calendar-event",
+      "admin" :false,
+      "user": true
+    },
+    {
+      "label": "Events",
       "action": "/eventmanagement",
-      "icon": "bi bi-calendar-event"
+      "icon": "bi bi-calendar-event",
+      "admin" :true,
+      "user": true
     }
+   
   ]
 }
 

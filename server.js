@@ -29,8 +29,12 @@ app.get("/api/json/:category/:page", (req, res) => {
 app.post("/authenticate", (req, res) => {
     const { email, password } = req.body;
     if (email === "admin" && password === "admin") {
-        res.json({ success: true, message: "Login Successful" });
-    } else {
+        res.json({ success: true, message: "Login Successful" ,admin:"yes"});
+    } 
+    else if (email === "student" && password === "student") {
+        res.json({ success: true, message: "Login Successful" ,admin:"no"});
+    } 
+    else {
         res.status(401).json({ success: false, message: "Invalid Credentials" });
     }
 });

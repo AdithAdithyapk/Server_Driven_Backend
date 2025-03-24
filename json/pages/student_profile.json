@@ -1,0 +1,79 @@
+{
+    "type": "component",
+    "title": "Student Profile",
+    "htmlStructure": [
+        {
+            "element": "div",
+            "class": "container-fluid min-vh-100 d-flex align-items-start p-5",
+            "children": [
+                {
+                    "element": "div",
+                    "class": "row w-100",
+                    "children": [
+                        {
+                            "element": "div",
+                            "class": "col-md-3",
+                            "children": [
+                                {
+                                    "element": "img",
+                                    "src": "https://dummyimage.com/150x150/2ecc71/ffffff&text=JD",
+                                    "class": "rounded-circle border border-3 border-primary p-1",
+                                    "alt": "Profile Picture"
+                                },
+                                {
+                                    "element": "h2",
+                                    "class": "mt-3 mb-1",
+                                    "text": "John Doe"
+                                },
+                              
+                                {
+                                    "element": "h4",
+                                    "class": "text-primary mt-4",
+                                    "text": "Student Details"
+                                },
+                                {
+                                    "element": "div",
+                                    "class": "d-flex flex-column mt-2",
+                                    "children": [
+                                        {
+                                            "element": "div",
+                                            "class": "mb-2",
+                                            "children": [
+                                                { "element": "span", "class": "fw-bold", "text": "Age: " },
+                                                { "element": "span", "text": "21" }
+                                            ]
+                                        },
+                                        {
+                                            "element": "div",
+                                            "class": "mb-2",
+                                            "children": [
+                                                { "element": "span", "class": "fw-bold", "text": "Email: " },
+                                                { "element": "span", "text": "johndoe@example.com" }
+                                            ]
+                                        },
+                                        {
+                                            "element": "div",
+                                            "class": "mb-2",
+                                            "children": [
+                                                { "element": "span", "class": "fw-bold", "text": "Department: " },
+                                                { "element": "span", "text": "Computer Science" }
+                                            ]
+                                        },
+                                        {
+                                            "element": "div",
+                                            "class": "mb-2",
+                                            "children": [
+                                                { "element": "span", "class": "fw-bold", "text": "Enrollment Status: " },
+                                                { "element": "span", "class": "text-success fw-bold", "text": "Enrolled" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
