@@ -1,0 +1,118 @@
+{
+    "type": "component",
+    "title": "Add Student",
+    "htmlStructure": [
+      {
+        "element": "div",
+        "class": "container mt-4",
+        "children": [
+          {
+            "element": "div",
+            "class": "row",
+            "children": [
+              {
+                "element": "div",
+                "class": "col-md-6",
+                "children": [
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Full Name", "for": "studentName" },
+                      {
+                        "element": "input",
+                        "type": "text",
+                        "name": "name",
+                        "id": "name",
+                        "class": "form-control",
+                        "placeholder": "Enter Full Name",
+                        "required": true
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Email", "for": "studentEmail" },
+                      {
+                        "element": "input",
+                        "type": "email",
+                        "name": "email",
+                        "id": "email",
+                        "class": "form-control",
+                        "placeholder": "Enter Email",
+                        "required": true
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Age", "for": "studentAge" },
+                      {
+                        "element": "input",
+                        "type": "number",
+                        "name": "age",
+                        "id": "age",
+                        "class": "form-control",
+                        "placeholder": "Enter Age",
+                        "required": true
+                      }
+                    ]
+                  }
+                ]
+              },{
+                "element": "div",
+                "class": "col-md-6",
+                "children": [
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      { "element": "label", "text": "Department" },
+                      {
+                        "element": "select",
+                        "name": "department",
+                        "class": "form-control",
+                        "options": [
+                          { "value": "", "label": "Select Department" },
+                          { "value": "cs", "label": "Computer Science" },
+                          { "value": "ece", "label": "Electronics" },
+                          { "value": "me", "label": "Mechanical" }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "class": "form-group",
+                    "children": [
+                      {
+                        "element": "checkbox",
+                        "name": "enrolled",
+                        "label": "Enroll for Department",
+                        "class": "form-check-input",
+                        "format": "yes-no"
+                      }
+                    ]
+                  }
+                ]
+              }
+              
+             
+            ]
+          }
+        ]
+      }
+    ],
+    "modalActions": {
+      "close": {
+        "text": "Cancel"
+      },
+      "submit": {
+        "text": "Save"
+      }
+    }
+  }

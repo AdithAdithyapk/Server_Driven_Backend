@@ -14,10 +14,18 @@
         "date": "2025-04-20",
         "time": "6:00 PM",
         "venue": "Open Grounds",
-        "color": "red"
+        "background-color": "red"
       },
       {
         "id": 3,
+        "title": "Cultural Night",
+        "date": "2025-04-20",
+        "time": "6:00 PM",
+        "venue": "Open Grounds",
+        "color": "red"
+      },
+    {
+        "id": 4,
         "title": "Cultural Night",
         "date": "2025-04-20",
         "time": "6:00 PM",

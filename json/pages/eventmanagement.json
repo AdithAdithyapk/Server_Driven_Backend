@@ -9,44 +9,71 @@
   "htmlStructure": [
     {
       "element": "div",
-      "class": "d-flex flex-row flex-wrap gap-3",
+      "class": "container mt-4",
       "children": [
         {
           "element": "div",
-          "class": "col-md-4",
+          "class": "d-flex justify-content-between align-items-center mb-4",
+          "children": [
+            {
+              "element": "h3",
+              "text": "Upcoming Events",
+              "class": "mb-0"
+            },
+            {
+              "element": "button",
+              "text": "➕ Add New Event",
+              "class": "btn btn-primary",
+              "action": {
+                "type": "openModal",
+                "modalId": "addEvent",
+                "title" : "Add Event"
+            }
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "class": "row",
           "repeat": "data.events",
           "children": [
             {
               "element": "div",
-              "class": "card bg-{{item.color}} shadow mb-4",
+              "class": "col-md-4 mb-4",
               "children": [
                 {
                   "element": "div",
-                  "class": "card-body",
+                  "class": "card shadow",
                   "children": [
                     {
-                      "element": "h5",
-                      "text": "{{item.title}}",
-                      "class": "card-title"
-                    },
-                    {
-                      "element": "p",
-                      "text": "📅 {{item.date}} | 🕒 {{item.time}}",
-                      "class": "card-text"
-                    },
-                    {
-                      "element": "p",
-                      "text": "📍 {{item.venue}}",
-                      "class": "card-text"
-                    },
-                    {
-                      "element": "button",
-                      "text": "View Details",
-                      "class": "btn btn-light btn-sm mt-2",
-                      "action": {
-                        "type": "navigate",
-                        "route": "/events/{{item.id}}"
-                      }
+                      "element": "div",
+                      "class": "card-body",
+                      "children": [
+                        {
+                          "element": "h5",
+                          "text": "{{item.title}}",
+                          "class": "card-title"
+                        },
+                        {
+                          "element": "p",
+                          "text": "📅 {{item.date}} | 🕒 {{item.time}}",
+                          "class": "card-text"
+                        },
+                        {
+                          "element": "p",
+                          "text": "📍 {{item.venue}}",
+                          "class": "card-text"
+                        },
+                        {
+                          "element": "button",
+                          "text": "View Details",
+                          "class": "btn btn-primary btn-sm mt-2",
+                          "action": {
+                            "type": "navigate",
+                            "route": "/events/{{item.id}}"
+                          }
+                        }
+                      ]
                     }
                   ]
                 }
