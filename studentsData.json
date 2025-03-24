@@ -20,6 +20,13 @@
       "name": "adith",
       "email": "loki@gamil,com",
       "age": "32"
+    },
+    {
+      "name": "sharanya",
+      "email": "sharu@gmail.com",
+      "age": "21",
+      "department": "ece",
+      "enrolled": "Yes"
     }
   ]
 }
